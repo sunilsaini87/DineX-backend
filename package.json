@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "type": "module",
-  "main": "dist/index.js",
+  "main": "./dist/index.js",
   "scripts": {
     "dev": "concurrently \"nodemon\" \"npm run stripe\"",
     "stripe": "stripe listen --forward-to localhost:7000/api/order/checkout/webhook",
