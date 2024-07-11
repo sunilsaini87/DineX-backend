@@ -1,13 +1,11 @@
 {
   "compilerOptions": {
     "target": "ES2020",
-    "module": "NodeNext",
-    "rootDir": "src",
-    "moduleResolution": "NodeNext",
-    "outDir": "dist",
-    "strict": true,
+    "module": "ESNext",
+    "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
-    "noEmit": true,
-  }
-  
+    "noEmit": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
 }
