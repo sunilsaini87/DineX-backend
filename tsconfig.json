@@ -2,9 +2,9 @@
   "compilerOptions": {
     "target": "ES2020",
     "module": "ESNext",
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "noEmit": true
+    "moduleResolution": "node",  // Change to 'node' for Node.js environment
+    "outDir": "dist",            // Specify output directory for compiled JavaScript
+    "strict": true
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules"]
