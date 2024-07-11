@@ -1,7 +1,7 @@
-import express from "express";
-import MyUserController from "../controllers/MyUserController.ts";
-import { jwtCheck, jwtParse } from "../middleware/auth.ts";
-import { validateMyUserRequest } from "../middleware/validation.ts";
+import * as express from "express";
+import MyUserController from "../controllers/MyUserController";
+import { jwtCheck, jwtParse } from "../middleware/auth";
+import { validateMyUserRequest } from "../middleware/validation";
 
 const router = express.Router();
 
