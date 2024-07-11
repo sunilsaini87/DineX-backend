@@ -1,7 +1,7 @@
 import { auth } from "express-oauth2-jwt-bearer";
 import { Request, Response, NextFunction } from "express";
-import * as jwt from "jsonwebtoken";
-import User from "../models/user";
+import jwt from "jsonwebtoken";
+import User from "../models/user.js";
 
 declare global {
   namespace Express {

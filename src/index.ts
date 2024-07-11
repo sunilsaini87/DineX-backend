@@ -1,13 +1,12 @@
-import { Request, Response } from "express";
-import * as express from "express";
-import * as cors from "cors";
+import express, { Request, Response } from "express";
+import cors from "cors";
 import "dotenv/config";
 import mongoose from "mongoose";
-import myUserRoute from "./routes/MyUserRoute";
+import myUserRoute from "./routes/MyUserRoute.js";
 import { v2 as cloudinary } from "cloudinary";
-import myRestaurantRoute from "./routes/MyRestaurantRoute";
-import restaurantRoute from "./routes/RestaurantRoute";
-import orderRoute from "./routes/OrderRoute";
+import myRestaurantRoute from "./routes/MyRestaurantRoute.js";
+import restaurantRoute from "./routes/RestaurantRoute.js";
+import orderRoute from "./routes/OrderRoute.js";
 
 mongoose
   .connect(process.env.MONGODB_CONNECTION_STRING as string)
@@ -36,8 +35,6 @@ app.use("/api/my/restaurant", myRestaurantRoute);
 app.use("/api/restaurant", restaurantRoute);
 app.use("/api/order", orderRoute);
 
-const port = process.env.PORT || 7000;
-
-app.listen(port, () => {
-  console.log(`Server started on http://localhost:${port}`);
+app.listen(7000, () => {
+  console.log("server started on localhost:7000");
 });
